@@ -12,12 +12,11 @@
     <!-- Styles can have names, titles and abstracts -->
       <Title>TEC bus stop</Title>
       <Abstract>A bus stop designed for OSM contributors</Abstract>
-      <!-- FeatureTypeStyles describe how to render different features -->
       <!-- A FeatureTypeStyle for rendering points -->
       <FeatureTypeStyle>
         <Rule>
-          <Name>rule1</Name>
-          <Title>point</Title>
+          <Name>TEC_rule_0</Name>
+          <Title>TEC_ bus stop</Title>
           <Abstract>a yellow dot with white stroke</Abstract>
             <PointSymbolizer>
               <Graphic>
@@ -38,6 +37,7 @@
          <Label>
            <ogc:PropertyName>POT_NOM_HA</ogc:PropertyName> (<ogc:PropertyName>POT_ID</ogc:PropertyName>)
          </Label>
+         <!-- a white halo to see the label on black background -->
          <Halo>
            <Radius>1</Radius>
            <Fill>
@@ -45,12 +45,13 @@
            </Fill>
          </Halo>
         <Font>
-           <CssParameter name="font-family">DejaVu Sans</CssParameter>
+           <CssParameter name="font-family">Lucida Sans</CssParameter>
            <CssParameter name="font-size">12</CssParameter>
            <CssParameter name="font-style">normal</CssParameter>
            <CssParameter name="font-weight">bold</CssParameter>
          </Font>
          <LabelPlacement>
+         <!-- The label is placed at the right of the bus stop, with a 7px X offset -->
            <PointPlacement>
              <AnchorPoint>
                <AnchorPointX>0.0</AnchorPointX>
